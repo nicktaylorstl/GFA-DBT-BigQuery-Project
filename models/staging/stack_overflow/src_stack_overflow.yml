@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: stack_overflow
+    description: Data from Stack Overflow
+    database: bigquery-public-data
+    schema: stackoverflow
+    tables:
+      - name: badges
+        description: Stack overflow badges
+      - name: comments
+        description: Stack overflow comments
+      - name: post_history
+        description: Stack overflow post history
+      - name: post_links
+        description: Stack overflow post links
+      - name: posts_answers
+        description: Stack overflow post answers
+      - name: posts_moderator_nomination
+        description: Stack overflow posts moderator nomination
+      - name: post_orphaned_tag_wiki
+        description: Stack overflow post orphaned tag wiki
+      - name: posts_privilege_wiki
+        description: Stack overflow posts privilege wiki
+      - name: posts_questions
+        description: Stack overflow posts questions
+      - name: posts_tag_wiki
+        description: Stack overflow posts tag wiki
+      - name: posts_tag_wiki_excerpt
+        description: Stack overflow posts tag wiki excerpt
+      - name: posts_wiki_placeholder
+        description: Stack overflow posts wiki placeholder
+      - name: stackeoverflow_posts
+        description: Stack overflow posts
+      - name: tags
+        description: Stack overflow tags
+      - name: users
+        description: Stack overflow users
+      - name: votes
+        description: Stack overflow votes
