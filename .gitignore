@@ -1,0 +1,10 @@
+
+target/
+dbt_packages/
+logs/
+nickgreenfoxproject/logs/
+nickgreenfoxproject/target/
+nickgreenfoxproject/dbt_packages/
+nickgreenfoxproject/dbt-user-creds.json
+nickgreenfoxproject/nickt-creds.json
+.venv/
