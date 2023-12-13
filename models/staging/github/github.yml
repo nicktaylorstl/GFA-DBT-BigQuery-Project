@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: github
+    description: Data from Github
+    database: githubarchive
+    schema: day
+    tables:
+      - name: "20220101"
+        description: github commits
+      
+models:
+  - name: github
+    columns:
+    - name: _pk
+      tests:
+        - unique
+        - not_null
+    - name: payload
+      description: description
+    - name: actor_gravatar_id
+      description: description
+    - name: org_gravatar_id
+      description: description
+    - name: payload
+      description: description
+
+        
