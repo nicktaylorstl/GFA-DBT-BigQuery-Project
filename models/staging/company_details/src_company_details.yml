@@ -9,12 +9,24 @@ sources:
       - name: v3
         description: Raw companies data.
         columns:
-          - name: Organization
+          - name: _pk
             description: Primary key for customers.
             tests:
               - unique
               - not_null
-        loaded_at_field: _etl_loaded_at
-        freshness:
-          warn_after: {count: 12, period: hour}
-          error_after: {count: 24, period: hour}
+          - name: extracted_at_datetime_utc
+            description: datetime of extraction to database
+          - name: Organization
+            description: Name of the organization
+          - name: Tags
+            description: tags related to organization
+          - name: L1_type
+            description: Modern data stack for all entries in this dataset 
+          - name: L2_type
+            description: type of tool for the organization
+          - name: Repository_name
+            description: name of repository
+          - name: Repository_account
+            description: account name for the repository
+          - name: is_open_source_available
+            description: whether or not open source is available for this organization
