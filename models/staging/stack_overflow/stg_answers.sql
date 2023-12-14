@@ -8,11 +8,9 @@ with source as(
 final as (
     SELECT 
         id as _pk,
-        id as answer_id,
+        id,
         title,
         body, 
-        accepted_answer_id,
-        answer_count,
         comment_count,
         community_owned_date as community_owned_date_datetime_utc,
         creation_date as creation_date_datetime_utc,
@@ -26,7 +24,6 @@ final as (
         parent_id,
         post_type_id,
         score,
-        tags,
         view_count
     FROM source
 )
