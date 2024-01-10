@@ -1,3 +1,8 @@
+{{ config(
+    materialized='view',
+    schema='staging'
+) }}
+
 with source as(
     SELECT * 
     FROM {{source("stack_overflow","posts_answers")}}
