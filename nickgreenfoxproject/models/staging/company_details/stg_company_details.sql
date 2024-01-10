@@ -1,4 +1,4 @@
-SELECT ROW_NUMBER()OVER (ORDER BY Organization) as _pk,
+SELECT {{ dbt_utils.generate_surrogate_key(['Organization']) }} as _pk,
     _airbyte_extracted_at as extracted_at_datetime_utc, 
     Organization, 
     Tags, 
