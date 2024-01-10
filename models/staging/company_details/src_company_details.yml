@@ -6,14 +6,60 @@ sources:
     database: nickgreenfoxproject
     schema: CompanyDetails
     tables:
+      - name: v1
+        description: Raw companies data.
+        columns:
+        - name: _pk
+          description: Primary key for customers.
+        
+        - name: extracted_at_datetime_utc
+          description: datetime of extraction to database
+        - name: Organization
+          description: Name of the organization
+        - name: Tags
+          description: tags related to organization
+        - name: L1_type
+          description: Modern data stack for all entries in this dataset 
+        - name: L2_type
+          description: type of tool for the organization
+        - name: L3_type
+          description: dbt package or null
+        - name: Repository_name
+          description: name of repository
+        - name: Repository_account
+          description: account name for the repository
+        - name: is_open_source_available
+          description: whether or not open source is available for this organization      
+      - name: v2
+        description: Raw companies data.
+        columns:
+        - name: _pk
+          description: Primary key for customers.
+        
+        - name: extracted_at_datetime_utc
+          description: datetime of extraction to database
+        - name: Organization
+          description: Name of the organization
+        - name: Tags
+          description: tags related to organization
+        - name: L1_type
+          description: Modern data stack for all entries in this dataset 
+        - name: L2_type
+          description: type of tool for the organization
+        - name: L3_type
+          description: dbt package or null
+        - name: Repository_name
+          description: name of repository
+        - name: Repository_account
+          description: account name for the repository
+        - name: is_open_source_available
+          description: whether or not open source is available for this organization
       - name: v3
         description: Raw companies data.
         columns:
           - name: _pk
             description: Primary key for customers.
-            tests:
-              - unique
-              - not_null
+          
           - name: extracted_at_datetime_utc
             description: datetime of extraction to database
           - name: Organization
@@ -24,6 +70,8 @@ sources:
             description: Modern data stack for all entries in this dataset 
           - name: L2_type
             description: type of tool for the organization
+          - name: L3_type
+            description: dbt package or null
           - name: Repository_name
             description: name of repository
           - name: Repository_account

@@ -10,12 +10,13 @@ sources:
         description: Stack overflow post answers
         columns:
           - name: _pk
-            description: primary key 
-            tests:
-              - unique
-              - not_null                          
+            description: primary key                           
           - name: id
             description: id number for the post
+            tests:
+              - unique
+              - not_null
+              
           - name: body 
             description: body content of post
           - name: comment_count
@@ -50,12 +51,12 @@ sources:
         description: Stack overflow posts questions
         columns:
           - name: _pk
-            description: primary key 
-            tests:
-              - unique
-              - not_null  
+            description: primary key   
           - name: id
             description: id number for the post
+            tests:
+              - unique
+              - not_null
           - name: title
             description: title of the question
           - name: body 

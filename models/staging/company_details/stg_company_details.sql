@@ -4,6 +4,7 @@ SELECT ROW_NUMBER()OVER (ORDER BY Organization) as _pk,
     Tags, 
     L1_type, 
     L2_type, 
+    L3_type,
     Repository_name, 
     Repository_account, 
     CASE 
@@ -12,4 +13,4 @@ SELECT ROW_NUMBER()OVER (ORDER BY Organization) as _pk,
         ELSE NULL
     END as is_open_source_available
     
-FROM {{ source('companies', 'v3') }}
+FROM {{ source('companies', 'v1') }}
