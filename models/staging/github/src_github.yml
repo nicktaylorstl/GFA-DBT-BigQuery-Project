@@ -10,7 +10,7 @@ sources:
         description: github commits
       
 models:
-  - name: github
+  - name: src_github
     columns:
     - name: _pk
       description: Unique event ID as primary key

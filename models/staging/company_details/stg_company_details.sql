@@ -1,5 +1,5 @@
 {{ config(
-    materialized='view',
+    materialized='table',
     schema='staging'
 ) }}
 
@@ -19,4 +19,4 @@ SELECT {{ dbt_utils.generate_surrogate_key(['Organization']) }} as _pk,
         ELSE NULL
     END as is_open_source_available
     
-FROM {{ source('companies', 'v1') }}
+FROM {{ source('companies', 'company_details') }}
