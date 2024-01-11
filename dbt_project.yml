@@ -34,6 +34,8 @@ models:
   staging:
     +materialized: view
     +schema: staging
+    company_details:
+        +materialized: table
   intermediate:
     +materialized: table
   marts:

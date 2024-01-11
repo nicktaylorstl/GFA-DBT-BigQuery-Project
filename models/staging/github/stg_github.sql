@@ -1,4 +1,7 @@
-
+{{ config(
+    materialized='view',
+    schema='staging'
+) }}
 
 with source as (
     select * from {{source("github","20220101")}}
