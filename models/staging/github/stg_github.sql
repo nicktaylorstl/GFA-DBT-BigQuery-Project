@@ -31,4 +31,4 @@ final as (
     from source
 )
 select * from final
-LIMIT 100000
+LIMIT 100
