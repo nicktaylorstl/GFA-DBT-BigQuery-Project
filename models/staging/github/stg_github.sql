@@ -4,7 +4,7 @@
 ) }}
 
 with source as (
-    select * from {{source("github","20220101")}}
+    select * from {{source("github","202201")}}
 ),
 
 final as (
@@ -31,4 +31,4 @@ final as (
     from source
 )
 select * from final
-LIMIT 100
+LIMIT 100000

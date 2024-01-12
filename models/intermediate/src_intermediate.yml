@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: staging
+    description: Google Sheet with Company Details
+    database: nickgreenfoxproject
+    schema: project_staging
+    tables:
+      - name: stg_company_details
+      - name: stg_github
+      - name: stg_questions
+      - name: stg_answers
+        
