@@ -9,7 +9,7 @@ SELECT
     SPLIT(repo_name, '/')[SAFE_OFFSET(0)] AS repo_account,
     SPLIT(repo_name, '/')[SAFE_OFFSET(1)] AS repo_name_only
 
-FROM {{ source('staging', 'stg_github') }}
+from {{ ref('stg_github') }}
 ), 
 final as (
     SELECT 
@@ -23,6 +23,6 @@ final as (
         g.created_at_datetime_utc
     FROM g 
     JOIN
-    {{ source('staging', 'stg_company_details') }} as c ON g.repo_account = c.repository_account AND g.repo_name_only = c.repository_name
+    (select * from {{ ref('stg_company_details') }}) as c ON g.repo_account = c.repository_account AND g.repo_name_only = c.repository_name
 )
 SELECT * FROM final
