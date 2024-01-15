@@ -4,9 +4,10 @@ sources:
   - name: github
     description: Data from Github
     database: githubarchive
-    schema: month
+    schema: day
     tables:
-      - name: "202201"
+      - name: day
+        identifier: "2022*"
         description: github commits
       
 models:

@@ -4,7 +4,8 @@
 ) }}
 
 with source as (
-    select * from {{source("github","202201")}}
+    SELECT * from {{source("github","day")}}
+    WHERE _table_suffix between '0101' and '0331'
 ),
 
 final as (
@@ -31,4 +32,3 @@ final as (
     from source
 )
 select * from final
-LIMIT 100
