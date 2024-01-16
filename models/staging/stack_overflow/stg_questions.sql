@@ -6,7 +6,7 @@
 with source as(
     SELECT * 
     FROM {{source("stack_overflow","posts_questions")}}
-    WHERE creation_date > '2022-01-01T00:00:00.040000+00:00' and creation_date < '2023-01-01T00:00:00.040000+00:00'
+    WHERE creation_date > '2022-01-01T00:00:00.040000+00:00' and creation_date < '2022-04-01T00:00:00.040000+00:00'
     Order by creation_date
 ),
 
@@ -37,4 +37,3 @@ final as (
 )
 
 SELECT * from final
-LIMIT 100
