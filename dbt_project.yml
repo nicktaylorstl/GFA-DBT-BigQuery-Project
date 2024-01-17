@@ -34,10 +34,13 @@ models:
   nickgreenfoxproject:
     staging:
       +materialized: view
+      +schema: staging
       +tags: ['staging']
     intermediate:
       +materialized: table
+      +schema: intermediate
       +tags: ['intermediate']
     mart:
       +materialized: table
+      +schema: mart
       +tags: ['mart']
