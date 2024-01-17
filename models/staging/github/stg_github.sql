@@ -1,6 +1,5 @@
 {{ config(
-    materialized='view',
-    schema='staging'
+    tags['github']
 ) }}
 
 with source as (

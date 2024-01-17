@@ -1,6 +1,5 @@
 {{ config(
-    materialized='table',
-    schema='intermediate'
+    tags=['stack_overflow']
 ) }}
 
 WITH a AS (

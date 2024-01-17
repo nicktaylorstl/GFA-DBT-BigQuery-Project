@@ -1,6 +1,5 @@
 {{ config(
-    materialized='view',
-    schema='staging'
+    tags=['stack_overflow']
 ) }}
 
 with source as(

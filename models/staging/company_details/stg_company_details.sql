@@ -1,6 +1,5 @@
 {{ config(
-    materialized='view',
-    schema='staging'
+    tags=["company_details"]
 ) }}
 
 

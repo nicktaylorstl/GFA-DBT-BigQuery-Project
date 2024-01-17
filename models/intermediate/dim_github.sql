@@ -1,6 +1,5 @@
 {{ config(
-    materialized='table',
-    schema='intermediate'
+    tags=['github']
 ) }}
 
 with g as (
