@@ -10,7 +10,7 @@ SELECT {{ dbt_utils.generate_surrogate_key(['Organization']) }} as _pk,
     L1_type, 
     L2_type, 
     L3_type,
-    Repository_name, 
+    IFNULL(repository_name,Repository_account) as Repository_name, 
     Repository_account, 
     CASE 
         WHEN Open_source_available = 'Yes' THEN true
