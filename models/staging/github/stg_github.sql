@@ -1,5 +1,5 @@
 {{ config(
-    tags['github']
+    tags=['github']
 ) }}
 
 with source as (
