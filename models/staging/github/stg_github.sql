@@ -1,6 +1,4 @@
-{{ config(
-    tags['github']
-) }}
+{{ config(tags=['github']) }}
 
 with source as (
     SELECT * from {{source("github","day")}}
