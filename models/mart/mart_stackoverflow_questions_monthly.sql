@@ -28,6 +28,20 @@ FROM {{ ref('dim_questions') }}
 GROUP BY organization_name, month, quarter, year)
 SELECT     
     {{ dbt_utils.generate_surrogate_key(['month','organization_name']) }} as _pk,
+    CASE
+        WHEN month = 1 THEN '2022-01-01'
+        WHEN month = 2 THEN '2022-02-01'
+        WHEN month = 3 THEN '2022-03-01'
+        WHEN month = 4 THEN '2022-04-01'
+        WHEN month = 5 THEN '2022-05-01'
+        WHEN month = 6 THEN '2022-06-01'
+        WHEN month = 7 THEN '2022-07-01'
+        WHEN month = 8 THEN '2022-08-01'
+        WHEN month = 9 THEN '2022-09-01'
+        WHEN month = 10 THEN '2022-10-01'
+        WHEN month = 11 THEN '2022-11-01'
+        WHEN month = 12 THEN '2022-12-01'
+    END AS first_day_of_period,        
     *
 
 FROM source    
