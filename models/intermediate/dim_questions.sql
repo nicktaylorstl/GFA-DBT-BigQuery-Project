@@ -23,7 +23,7 @@ SELECT q._pk,
         q.comment_count,
         q.community_owned_date_datetime_utc,
         q.creation_date_datetime_utc,
-        q.favorite_count,
+        IFNULL(q.favorite_count, 0 ) as favorite_count,
         q.last_activity_date_datetime_utc,
         q.last_edit_date_datetime_utc,
         q.last_editor_display_name,
@@ -41,3 +41,5 @@ FROM q
 JOIN c ON q.tag = c.tag)
 
 select * from final
+
+  
