@@ -27,6 +27,13 @@ FROM {{ ref('dim_questions') }}
 GROUP BY organization_name, quarter, year)
 SELECT     
     {{ dbt_utils.generate_surrogate_key(['quarter','organization_name']) }} as _pk,
+    CASE
+        WHEN quarter = 1 THEN '2022-01-01'
+        WHEN quarter = 2 THEN '2022-04-01'
+        WHEN quarter = 3 THEN '2022-07-01'
+        WHEN quarter = 4 THEN '2022-10-01'
+
+    END AS first_day_of_period,       
     *
 
 FROM source    
