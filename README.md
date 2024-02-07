@@ -1,15 +1,6 @@
-Welcome to your new dbt project!
+The purpose of this project was to learn how to use DBT and Big Query
 
-### Using the starter project
+The project involved reading from Big Query's free API containing github repositories and stack overflow posts, along with a CSV listing organizations. 
+We had to create a mart layer combining specific information about the organizations activity on github, and the types of posts on stack overflow.
 
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+One interesting fact I learned from this project is that Apache Airflow employees have a disproportionally high amount of github activity on Saturdays and Sundays.
